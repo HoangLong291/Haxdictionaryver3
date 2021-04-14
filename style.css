@@ -1,0 +1,135 @@
+            p{
+                margin: 0;
+            }
+
+            .overlay{
+                background: linear-gradient(275deg,#E7FAB0 15%,#05d5ff 70%,#8AD9A5 94%);
+                background-size: cover;
+            
+            }
+
+            *, *::before, *::after {
+                box-sizing: border-box;
+            }
+
+            .overlay, .scare {
+                position: fixed;
+
+                top: 0;
+                left: 0;
+
+                height: 100vh;
+                width: 100vw;
+            }
+
+            p.overlay-title {
+                font-size: 24px;
+                font-weight: 900;
+                color: black;
+                line-height: 1;
+
+                margin-bottom: 16px;
+            }
+
+            .overlay-button {
+                font-family: Roboto;
+                background-color: #5E5D61;
+                color: #BCB7C3;
+                list-style: inline;
+                width:	 20%;
+                border: 2px solid grey;
+                text-decoration: none;
+                font-size: 100%;
+                margin: 1%;
+                border-radius: 2px;
+                display: inline-block;
+                transition-duration: 0.4s;
+                cursor: pointer;
+            }
+
+            .overlay-buttons-wrapper {
+                transition-duration: 0.3s;
+                margin: 8px;
+            }
+
+            p.overlay-description {
+                font-size: 16px;
+                font-weight: 400;
+                color: rgb(255, 0, 0);
+                line-height: 1.25;
+
+                margin-bottom: 32px;
+            }
+
+            a.overlay-link {
+                display: inline-block;
+
+                text-decoration: none;
+
+                font-size: 16px;
+                font-weight: 500;
+                color: rgb(132, 94, 194);
+                line-height: 1;
+
+                position: relative;
+
+                margin-top: 16px;
+            }
+
+            a.overlay-link::before {
+                position: absolute;
+
+                content: "";
+
+                height: calc(50% + 4px);
+                width: calc(100% + 8px);
+
+                bottom: -4px;
+                left: -4px;
+
+                background-color: rgba(132, 94, 194, 0.1);
+            }
+
+            .overlay-body {
+                max-width: 512px;
+
+                text-align: center;
+
+                font-family: "Inter", sans-serif;
+            }
+
+            .overlay.hidden {
+                display: none;
+            }
+
+            .overlay {
+                z-index: 2;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background-color: #f5f6fa;
+
+                padding-right: 24px;
+                padding-left: 24px;
+            }
+
+            .scare {
+                z-index: 1;
+            }
+
+            video#video {
+                height: 100%;
+                width: 100%;
+
+                object-fit: cover;
+            }
+
+			video#video::-webkit-media-controls-enclosure {
+				display:none !important;
+			}
+            #info{
+                color:  rgb(255, 0, 0);
+                font-family: Roboto;
+            }

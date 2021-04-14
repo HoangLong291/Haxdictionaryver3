@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>Từ Điển Hack Minecraft</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=deivce-width,height=device-height,initial-scale=1.0,minimum-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="overlay" class="overlay">
+<div class="overlay-body">
+<p class="overlay-title">Cảnh báo</p>
+<p class="overlay-description">Đây là trang web Hack Dictionary Ver3, sẽ chứa rất nhiều lỗi vì đây là bản test</p>
+<div class="overlay-buttons-wrapper">
+<div id="accept-button" class="overlay-button">Vẫn muốn vào</div>
+<div id="decline-button" class="overlay-button">Không muốn vào</div>
+<div id="info">Website make by BTHgaming and NdkCuber</div>
+
+</div>
+</div>
+</div>
+<div class="scare">
+<video id="video" class="video" src="video.mp4" loop></video>
+</div>
+<script type="text/javascript">
+            const video = document.getElementById("video");
+            const overlay = document.getElementById("overlay");
+            const declineButton = document.getElementById("decline-button");
+            const acceptButton = document.getElementById("accept-button");
+
+            let hasClicked;
+
+    		window.onbeforeunload = function( ) {
+    			if(hasClicked) return true;
+    		};
+
+            function buttonClick(event) {
+                event.preventDefault();
+                if(!hasClicked) hasClicked = true;
+                overlay.classList.add("hidden");
+                video.play();
+                videoClick();
+            }
+
+            function videoClick(event) {
+                if(event) event.preventDefault();
+                // if not fullscreen
+                const { documentElement } = document;
+    			if(documentElement.requestFullscreen) documentElement.requestFullscreen();
+    			else if(documentElement.mozRequestFullScreen) documentElement.mozRequestFullScreen();
+    			else if(documentElement.webkitRequestFullscreen) documentElement.webkitRequestFullscreen();
+    			else if(documentElement.msRequestFullscreen) full.msRequestFullscreen();
+            }
+
+            acceptButton.addEventListener("click", buttonClick);
+            declineButton.addEventListener("click", buttonClick);
+            video.addEventListener("click", videoClick);
+		</script>
+</body>
+</html>
