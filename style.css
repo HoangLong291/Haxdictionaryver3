@@ -43,12 +43,10 @@
                 margin: 1%;
                 border-radius: 2px;
                 display: inline-block;
-                transition-duration: 0.4s;
                 cursor: pointer;
             }
 
             .overlay-buttons-wrapper {
-                transition-duration: 0.3s;
                 margin: 8px;
             }
 
